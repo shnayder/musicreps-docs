@@ -2,7 +2,7 @@
 
 > **Superseded.** The button-highlighting design below was replaced by a simpler
 > feedback banner approach — see
-> [2026-02-23-answer-feedback.md](../../../exec-plans/active/2026-02-23-answer-feedback.md)
+> [[2026-02-23-answer-feedback]]
 > (v2: Feedback Banner). The banner shows the correct answer in green (correct)
 > or "No, {answer}" in red (wrong) between the prompt and the buttons, avoiding
 > the finger-occlusion and visual-noise problems described in that plan.

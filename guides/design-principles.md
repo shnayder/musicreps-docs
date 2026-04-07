@@ -2,7 +2,7 @@
 
 Enduring design values that guide decisions across the app. These principles
 should outlast any particular implementation. For the product vision (who it's
-for, where it's headed), see [vision.md](vision.md).
+for, where it's headed), see [[vision]].
 
 ---
 
@@ -21,7 +21,7 @@ How the product should work — what it does and doesn't do for users.
 3. **Consolidate before expanding.** New material is gated behind mastery of
    what's already been started. This applies within modes (item groups) and
    across modes (the skill lifecycle — see
-   [vision.md](vision.md#skill-lifecycle)).
+   [[vision]]).
 
 4. **Minimal friction.** Zero barriers to drilling. No login required to start
    practicing, no setup, no onboarding. Open the app and go. No random animations to sit through before you can get back to practice.
@@ -54,14 +54,14 @@ How the product should work — what it does and doesn't do for users.
 11. **Language reinforces identity.** UI copy should say "practice" and "reps",
     not "quiz" or "test." The product is a practice tool — language that
     implies evaluation or grading undermines the low-stakes, skill-building
-    tone. See [terminology.md](terminology.md) for the full term mapping.
+    tone. See [[terminology]] for the full term mapping.
 
 ---
 
 ## Visual Design Principles
 
 How the app should look and feel. See
-[visual-design.md](design/visual-design.md) for the full design system (colors,
+[[visual-design]] for the full design system (colors,
 typography, spacing, components).
 
 1. **Drill-first aesthetic** — nothing distracts from drilling. Chrome fades
@@ -91,7 +91,7 @@ typography, spacing, components).
 ## UX & Layout Principles
 
 How screens are structured and how users interact. See
-[layout-and-ia.md](design/layout-and-ia.md) for full detail with rules,
+[[layout-and-ia]] for full detail with rules,
 rationale, and examples for each principle.
 
 | #  | Principle                                      | One-line test                                                        |
@@ -137,4 +137,4 @@ designed.
   what they've mastered and what needs work. Heatmaps with Recall/Speed toggle.
 
 Engineering conventions for new modes (reuse shared infrastructure, consistency
-over accommodation) are in [architecture.md](architecture.md).
+over accommodation) are in [[architecture]].

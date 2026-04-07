@@ -4,7 +4,7 @@ Add `ActionButton` and `Text` components that encode the type hierarchy and
 button variant recipes into the component system. Migrate existing call sites.
 
 Source: item 8 from
-[design system review](../../design-docs/2026-03-16-design-system-review.md).
+[[2026-03-16-design-system-review|design system review]].
 
 Assumes the CSS token completion plan is already done (shadow, transition,
 opacity, font-weight tokens exist).

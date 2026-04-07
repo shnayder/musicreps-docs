@@ -29,7 +29,7 @@ infrastructure.
 ### CSS Token Completion + File Organization (was items 4-5)
 
 **Done.** See
-[exec plan](../exec-plans/active/2026-03-16-css-token-completion.md).
+[[2026-03-16-css-token-completion|exec plan]].
 
 - ~103 hardcoded values replaced with tokens: shadows (`--shadow-sm/md/lg/hover`),
   transitions (`--duration-fast/base/slow/linear`), opacities
@@ -44,7 +44,7 @@ infrastructure.
 ### Structural Recipe Components (was item 8)
 
 **Done.** See
-[exec plan](../exec-plans/active/2026-03-16-structural-recipe-components.md).
+[[2026-03-16-structural-recipe-components|exec plan]].
 
 - **`ActionButton`** component (`src/ui/action-button.tsx`) with
   `variant: 'primary' | 'secondary'`. Migrated: RoundCompleteActions,

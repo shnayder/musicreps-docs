@@ -7,12 +7,12 @@ as CSS custom properties in `src/styles.css` `:root`.
 
 | Guide | Contents |
 |-------|----------|
-| [color-system.md](color-system.md) | Three-layer color architecture, palette model, semantic families, heatmap, fretboard SVG |
-| [typography.md](typography.md) | Three-layer typography system, 5-tier scale, 20 roles, intensity tiers, design principles |
-| [spacing-and-tokens.md](spacing-and-tokens.md) | Spacing scale, elevation, transitions, opacity, z-index, touch targets, border radius |
-| [components.md](components.md) | Button variant taxonomy, info hierarchy pattern, structural components |
-| [screen-patterns.md](screen-patterns.md) | Home screen, quiz area, round complete, layout techniques |
-| [interaction.md](interaction.md) | Hover, focus, pressed states, accessibility standards |
+| [[color-system]] | Three-layer color architecture, palette model, semantic families, heatmap, fretboard SVG |
+| [[typography]] | Three-layer typography system, 5-tier scale, 20 roles, intensity tiers, design principles |
+| [[spacing-and-tokens]] | Spacing scale, elevation, transitions, opacity, z-index, touch targets, border radius |
+| [[components]] | Button variant taxonomy, info hierarchy pattern, structural components |
+| [[screen-patterns]] | Home screen, quiz area, round complete, layout techniques |
+| [[interaction]] | Hover, focus, pressed states, accessibility standards |
 
 ## Design Reference Pages
 
@@ -31,5 +31,5 @@ dispatching fixture events to the running app.
 
 For visual design principles (drill-first aesthetic, warmth, feedback clarity,
 information density, mobile-primary), see
-[design-principles.md](../design-principles.md). For layout and screen structure
-principles, see [layout-and-ia.md](layout-and-ia.md).
+[[design-principles]]. For layout and screen structure
+principles, see [[layout-and-ia]].

@@ -19,7 +19,7 @@ Before writing CSS, derive the design from the existing system:
 
 1. List every element in the feature, per state
 2. For each element, assign a content role from the
-   [type hierarchy](design/visual-design.md#type-hierarchy)
+   [[visual-design|type hierarchy]]
 3. Pick the correct structural component or CSS class
 4. Note any intentional deviations with rationale
 5. Then implement — the spec tells you exactly what to build
@@ -80,13 +80,13 @@ Example: "Suggestion card header uses subsection-header sizing but
 
 ## Reference
 
-- [Type hierarchy](design/visual-design.md#type-hierarchy) — content role → size
+- [[visual-design|Type hierarchy]] — content role → size
   + weight + color
-- [Structural components](design/visual-design.md#structural-components) —
+- [[visual-design|Structural components]] —
   ActionButton and Text
-- [Elevation](design/visual-design.md#elevation-shadows) — shadow tokens
-- [Spacing scale](design/visual-design.md#spacing-scale) — `--space-1` through
+- [[visual-design|Elevation]] — shadow tokens
+- [[visual-design|Spacing scale]] — `--space-1` through
   `--space-6`
-- [Layout & IA principles](design/layout-and-ia.md) — screen structure, content
+- [[layout-and-ia|Layout & IA principles]] — screen structure, content
   priority, grouping
-- [Design principles](design-principles.md) — product, visual, and UX values
+- [[design-principles|Design principles]] — product, visual, and UX values

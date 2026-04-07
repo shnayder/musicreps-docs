@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-05
 **Status:** Draft
-**Implements:** [skill-tree-spec.md Phase 1](../product-specs/active/2026-03-03-skill-tree-spec.md#phase-1-details)
+**Implements:** [[2026-03-03-skill-tree-spec|skill-tree-spec.md Phase 1]]
 
 ## Goal
 

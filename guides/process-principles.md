@@ -1,7 +1,7 @@
 # Process Principles
 
 Enduring values for how we develop this app. Not workflow steps (those are in
-[feature-process.md](feature-process.md) and [development.md](development.md))
+[[feature-process]] and [[development]])
 but the principles behind them.
 
 ---

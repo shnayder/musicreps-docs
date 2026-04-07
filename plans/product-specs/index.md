@@ -3,7 +3,7 @@
 Specs describing **what** to build and **why** — new quiz modes, UX flows, and
 feature designs from the user's perspective.
 
-See [guides/feature-process.md](../../guides/feature-process.md) for the design
+See [[feature-process|guides/feature-process.md]] for the design
 spec template.
 
 ## Lifecycle
@@ -14,11 +14,11 @@ spec template.
 
 ## Active
 
-- [Mid-Quiz Status](active/2026-02-12-mid-quiz-status-spec.md)
+- [[2026-02-12-mid-quiz-status-spec|Mid-Quiz Status]]
 
 ## Completed
 
-- [Speed Tap Mode](completed/2026-02-10-add-speed-tap-mode.md)
-- [Math Quiz Progression](completed/2026-02-11-math-quiz-progression.md)
-- [New Quiz Modes](completed/2026-02-11-new-quiz-modes-spec.md)
-- [Calibration Screen](completed/2026-02-12-calibration-screen.md)
+- [[2026-02-10-add-speed-tap-mode|Speed Tap Mode]]
+- [[2026-02-11-math-quiz-progression|Math Quiz Progression]]
+- [[2026-02-11-new-quiz-modes-spec|New Quiz Modes]]
+- [[2026-02-12-calibration-screen|Calibration Screen]]

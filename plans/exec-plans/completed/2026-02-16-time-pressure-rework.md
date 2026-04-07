@@ -3,7 +3,7 @@
 ## Context
 
 Implements the
-[time-pressure-rework product spec](../../product-specs/completed/time-pressure-rework.md).
+[[time-pressure-rework|time-pressure-rework product spec]].
 
 The per-item adaptive deadline system (countdown bar + timeout + deadline.js)
 created frustration: deadlines tightened as users improved, leading to frequent
@@ -11,7 +11,7 @@ created frustration: deadlines tightened as users improved, leading to frequent
 system with timed rounds — "how many can you answer in 60 seconds?"
 
 This supersedes the earlier
-[spaced-repetition-timer exec plan](./2026-02-13-spaced-repetition-timer.md)
+[[2026-02-13-spaced-repetition-timer|spaced-repetition-timer exec plan]]
 which implemented the per-item deadline system being removed here.
 
 ## Design

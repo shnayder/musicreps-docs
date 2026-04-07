@@ -3,7 +3,7 @@
 ## Context
 
 Implements the
-[timer design spec](../product-specs/active/2026-02-13-spaced-repetition-timer-spec.md).
+[[2026-02-13-spaced-repetition-timer-spec|timer design spec]].
 The existing countdown bar is visual-only. This plan makes it consequential:
 per-item adaptive deadlines, auto-submit on expiry, persistence across sessions.
 

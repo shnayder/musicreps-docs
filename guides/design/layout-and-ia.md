@@ -5,10 +5,10 @@ architecture — _where things go and why_. These principles should outlast any
 particular implementation.
 
 For how to apply these principles to specific layout decisions, see
-[screen-patterns.md](screen-patterns.md). For the full principles index
-(product, visual, and UX), see [design-principles.md](../design-principles.md).
+[[screen-patterns]]. For the full principles index
+(product, visual, and UX), see [[design-principles]].
 For the current DOM structure, see
-[architecture.md](../architecture.md#universal-mode-layout).
+[[architecture]].
 
 ---
 
@@ -265,7 +265,7 @@ predict what clicking it will do.
 
 - Don't style a tab like a toggle or a filter like a button.
 - Each component type should have distinct visual treatment (see
-  [components.md](components.md) for the taxonomy).
+  [[components]] for the taxonomy).
 - Selection states should vary by component type (tabs: underline, toggles:
   background fill, buttons: pressed state).
 

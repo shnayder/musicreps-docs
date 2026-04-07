@@ -239,4 +239,4 @@ on.
 ---
 
 For design principles (product, visual, UX), see
-[design-principles.md](design-principles.md).
+[[design-principles]].

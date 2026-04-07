@@ -2,8 +2,8 @@
 
 How the app is built today — code structure, patterns, algorithms, and DOM
 layout. This is a current-state reference, not aspirational design. For design
-principles, see [design-principles.md](design-principles.md). For where the
-product is headed, see [vision.md](vision.md).
+principles, see [[design-principles]]. For where the
+product is headed, see [[vision]].
 
 ## System Overview
 
@@ -87,7 +87,7 @@ cross-mode imports, foundation only imports foundation, engine only imports
 foundation + engine, display only imports foundation + display, hooks/UI don't
 import from modes or app. Every source file must be classified into a layer —
 adding a new file without classifying it fails the test. See
-[development.md](development.md#architecture-test) for details.
+[[development]] for details.
 
 ## Build System
 
@@ -485,7 +485,7 @@ controlled by `sortUnstarted` option in `computeRecommendations()`.
 
 When a note has two enharmonic spellings (C#/Db, D#/Eb, etc.), the choice is
 governed by standard music-theory conventions. Five rules are documented in
-priority order in [accidental-conventions.md](accidental-conventions.md). In
+priority order in [[accidental-conventions]]. In
 practice:
 
 - **Chord/scale modes** (chord spelling, scale degrees, diatonic chords, key
@@ -510,7 +510,7 @@ in `mode-catalog.ts`). At runtime, Preact renders all UI into these containers.
 Phase classes on the mode container control which section is visible.
 
 For the design principles behind this layout, see
-[layout-and-ia.md](design/layout-and-ia.md).
+[[layout-and-ia]].
 
 ### Idle phase: Practice/Progress tabs
 
@@ -628,7 +628,7 @@ rather than adding complexity. Per-mode flags are a code smell.
 7. **Architecture test**: `logic.ts` and `definition.ts` files are
    auto-classified by path (`src/modes/` prefix)
 8. **Accidentals**: determine which naming convention applies (see
-   [accidental-conventions.md](accidental-conventions.md)) and update that
+   [[accidental-conventions]]) and update that
    guide's mode table
 9. **CLAUDE.md**: update quiz modes table with item count, answer type, and ID
    format

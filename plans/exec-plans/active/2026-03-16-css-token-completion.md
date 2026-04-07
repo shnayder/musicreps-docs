@@ -5,7 +5,7 @@ add section organization. No visual changes — every token replacement must be
 value-identical to the original.
 
 Source: items 4 and 5 from
-[design system review](../design-docs/2026-03-16-design-system-review.md).
+[[2026-03-16-design-system-review|design system review]].
 
 ## Problem / Context
 

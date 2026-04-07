@@ -91,7 +91,7 @@ Write tests as you go, not just at the end.
 ### Architecture test
 
 `src/architecture_test.ts` enforces the layer boundaries documented in
-[architecture.md](architecture.md#module-dependency-graph). It shells out to
+[[architecture]]. It shells out to
 `deno info --json src/app.ts` to get the real import graph (resolved by Deno's
 module resolver — no regex parsing), then asserts:
 
@@ -571,7 +571,7 @@ xcodebuild -project ios/App/App.xcodeproj \
 The app boots from bundled local files (`ios/App/App/public/`). A background
 updater checks for newer releases at
 `https://shnayder.github.io/musicreps/release/` and downloads them for the next
-app restart. See [releases.md](releases.md) for the full OTA system.
+app restart. See [[releases]] for the full OTA system.
 
 For local development, `CAP_DEV_PORT` points the app at a local dev server:
 

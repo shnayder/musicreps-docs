@@ -1,8 +1,8 @@
 # Quiz IA Polish: Phase 2 — Design Spec
 
 Phase 2 (IA fixes) from the
-[Quiz Polish exploration](../../design-docs/2026-02-17-quiz-polish.md). Builds
-on [Phase 1](2026-02-17-quiz-flow-polish-spec.md) (flow fixes).
+[[2026-02-17-quiz-polish|Quiz Polish exploration]]. Builds
+on [[2026-02-17-quiz-flow-polish-spec|Phase 1]] (flow fixes).
 
 ## Overview
 

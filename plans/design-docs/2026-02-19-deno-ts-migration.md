@@ -1,7 +1,7 @@
 # Migration to All-Deno, All-TypeScript
 
 **Date:** 2026-02-19 **Status:** Proposed **Depends on:**
-[Linting strategy review](2026-02-19-linting-strategy.md)
+[[2026-02-19-linting-strategy|Linting strategy review]]
 
 ## Goal
 

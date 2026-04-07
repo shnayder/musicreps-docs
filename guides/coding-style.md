@@ -194,7 +194,7 @@ preserves anything you might need to recover.
 - **Use CSS custom properties for all design tokens** — colors, font sizes,
   spacing, border radii. Raw values belong only inside `:root` variable
   definitions. If no variable exists, extend the system rather than hardcoding.
-  See [visual-design.md](design/visual-design.md#using-the-color-system).
+  See [[visual-design]].
 - **HSL for variable definitions**: `:root` color variables use `hsl()` for
   readability and tuning. Code outside `:root` references `var(--color-*)`.
 - **No inline styles** — use CSS classes. Visibility controlled by conditional

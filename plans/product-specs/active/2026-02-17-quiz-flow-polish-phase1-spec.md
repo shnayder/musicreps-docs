@@ -1,7 +1,7 @@
 # Quiz Flow Polish: Phase 1 — Design Spec
 
 Phase 1 (flow fixes) from the
-[Quiz Polish exploration](../../design-docs/2026-02-17-quiz-polish.md).
+[[2026-02-17-quiz-polish|Quiz Polish exploration]].
 
 ## Overview
 

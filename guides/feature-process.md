@@ -5,7 +5,7 @@ How to plan, design, implement, and document changes.
 ## Context
 
 - `vision.md` describes the product vision.
-  [design-principles.md](design-principles.md) covers product, visual, and UX
+  [[design-principles]] covers product, visual, and UX
   principles. Relevant when making major design decisions, rarely relevant when
   following existing patterns.
 
@@ -45,7 +45,7 @@ Write when **redesigning or polishing a feature's visual appearance**. Typical
 for layout cleanups, hierarchy improvements, or design system alignment. Derive
 the design from the type hierarchy and structural components before writing CSS.
 
-See [visual-design-spec.md](visual-design-spec.md) for the full template and
+See [[visual-design-spec]] for the full template and
 process.
 
 ### Bug fix plan
@@ -107,7 +107,7 @@ Before considering a spec ready for review, verify:
 - [ ] **Stays at product level.** No state shapes, function signatures, storage
       keys, or DOM structure. Those belong in the implementation plan.
 - [ ] **Consistent with design principles.** Check
-      [design-principles.md](design-principles.md) — especially "fewer options"
+      [[design-principles]] — especially "fewer options"
       (can the system adapt instead of adding a toggle?) and "short-session
       friendly" (does state need to persist?).
 - [ ] **Single user-facing metric where possible.** Avoid exposing internal
@@ -115,7 +115,7 @@ Before considering a spec ready for review, verify:
       genuinely useful to the user.
 - [ ] **Screen states described.** For UI features, describe what each screen
       state looks like (idle, quizzing, etc.) and the content priority order.
-      See [layout-and-ia.md](design/layout-and-ia.md).
+      See [[layout-and-ia]].
 - [ ] **Labels and grouping specified.** New toggles, indicators, or data
       displays have labels. Related controls are grouped. No unlabeled elements.
 - [ ] **Scope is clear.** Goals and non-goals are explicit. No feature creep
@@ -126,7 +126,7 @@ Before considering a spec ready for review, verify:
       border radii reference existing CSS custom properties — not hardcoded
       HSL/hex/px values. If no token exists, the spec should extend the system
       (add a new variable to `:root`). See
-      [visual-design.md](design/visual-design.md#using-the-color-system).
+      [[visual-design]].
 
 ## Architectural Review (Before Implementing)
 
@@ -135,22 +135,22 @@ Before writing code, verify that your design:
 - **Integrates with existing patterns**: state machine phases, declarative
   `render()`, mode plugin interface, factory pattern. Don't introduce parallel
   mechanisms (shadow booleans, imperative DOM overrides). See
-  [architecture.md](architecture.md) for pattern details.
+  [[architecture]] for pattern details.
 - **Extends shared abstractions** when that's cleaner than working around them.
   If adding a new state phase to the engine, add it to `quiz-engine-state.ts`.
 - **Follows build system conventions**: proper ES module `import`/`export`,
   entry point is `src/app.ts`. See
-  [architecture.md](architecture.md#build-system).
+  [[architecture]].
 - **Reuses shared helpers**: `computeRecommendations()` for progression,
   `createStatsControls()` for stats display, `createNoteKeyHandler()` for
   keyboard input, `deriveScaledConfig()` for timing thresholds.
 - **Follows layout/IA principles**: content ordered by interaction priority per
   screen state, controls grouped and labeled, no redundant affordances. See
-  [layout-and-ia.md](design/layout-and-ia.md).
+  [[layout-and-ia]].
 - **Consistency over accommodation**: if a mode behaves differently, ask "should
   it?" before "how do we support that?" Change the outlier to match the standard
   rather than adding per-mode flags or overrides. See
-  [architecture.md](architecture.md).
+  [[architecture]].
 
 ## Templates
 

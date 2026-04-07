@@ -3,8 +3,8 @@
 Target architecture for Music Reps. Describes where we're heading — the current
 codebase is partway there, with a migration path outlined at the end.
 
-For what the product does and who it's for, see [vision.md](vision.md). For how
-the code works today, see [architecture.md](architecture.md).
+For what the product does and who it's for, see [[vision]]. For how
+the code works today, see [[architecture]].
 
 ## What we're building
 

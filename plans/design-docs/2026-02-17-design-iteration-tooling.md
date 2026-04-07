@@ -3,7 +3,7 @@
 ## Context
 
 The
-[design polish assessment](plans/design-docs/2026-02-17-design-polish-assessment.md)
+[[2026-02-17-design-polish-assessment|design polish assessment]]
 identifies 12 items across 3 tiers. Iterating on these is slow because most
 require navigating to specific app states (wrong-answer feedback,
 round-complete, practice card with recommendation, etc.). The goal is tooling

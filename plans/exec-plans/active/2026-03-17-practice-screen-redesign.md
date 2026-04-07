@@ -1,6 +1,6 @@
 # Practice Screen Redesign — Implementation Plan
 
-**Spec:** [practice-plan.md](../../product-specs/active/2026-03-17-practice-plan.md)
+**Spec:** [[2026-03-17-practice-plan|practice-plan.md]]
 
 ## Approach
 

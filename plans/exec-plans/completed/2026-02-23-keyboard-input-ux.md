@@ -1,6 +1,6 @@
 # Keyboard Input UX — Execution Plan
 
-Implements the [keyboard input UX spec](../../product-specs/active/2026-02-23-keyboard-input-ux-spec.md):
+Implements the [[2026-02-23-keyboard-input-ux-spec|keyboard input UX spec]]:
 Enter-to-commit, keyboard hints, and progressive narrowing.
 
 ## Architecture Decisions

@@ -10,7 +10,7 @@ of truth — this guide describes the taxonomy and usage rules.
 
 Every interactive element falls into one of these categories. Each has a
 distinct visual treatment — don't reuse styles across roles. See
-[layout-and-ia.md](layout-and-ia.md#one-interaction-grammar) (principle #14).
+[[layout-and-ia]] (principle #14).
 
 | Variant | Role | Component |
 |---------|------|-----------|

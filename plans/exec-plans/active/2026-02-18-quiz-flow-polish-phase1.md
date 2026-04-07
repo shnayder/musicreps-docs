@@ -1,7 +1,7 @@
 # Quiz Flow Polish: Phase 1
 
 Implements the
-[Quiz Flow Polish Phase 1 spec](../../product-specs/active/2026-02-17-quiz-flow-polish-phase1-spec.md).
+[[2026-02-17-quiz-flow-polish-phase1-spec|Quiz Flow Polish Phase 1 spec]].
 
 ## Problem / Context
 

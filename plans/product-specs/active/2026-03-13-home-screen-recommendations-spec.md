@@ -41,7 +41,7 @@ The building blocks are already in place:
   always selected. Deselected tracks collapse into "Other skills."
 - **Per-mode metrics** — each mode has item-level speed, freshness, and
   automaticity data, rolled up to group-level and mode-level status (see
-  [mastery spec](2026-03-04-mastery-and-recommendations-spec.md)).
+  [[2026-03-04-mastery-and-recommendations-spec|mastery spec]]).
 - **Recommendation engine** — `computeRecommendations()` produces consolidation
   targets, expansion suggestions, and stale-group detection per mode.
 - **Status labels** — "Not started", "Learning", "Developing", "Fluent",

@@ -2,13 +2,13 @@
 
 How to make layout decisions in this app. Not a description of what exists (the
 preview page serves that role) and not a list of principles
-([layout-and-ia.md](layout-and-ia.md) covers those). This is the practical
+([[layout-and-ia]] covers those). This is the practical
 bridge — how to apply principles to concrete screen decisions.
 
 **Companion docs:**
 
-- [layout-and-ia.md](layout-and-ia.md) — 17 enduring UX principles (the "why")
-- [architecture.md](../architecture.md#universal-mode-layout) — DOM structure
+- [[layout-and-ia]] — 17 enduring UX principles (the "why")
+- [[architecture]] — DOM structure
   and phase classes (the implementation)
 - Preview page (`/preview`) — visual source of truth
 
@@ -298,8 +298,8 @@ principle #4 (Minimal friction in design-principles.md).
 
 | Need | Go to |
 |------|-------|
-| Why a layout decision is right | [layout-and-ia.md](layout-and-ia.md) (17 principles) |
-| Current DOM structure and phase classes | [architecture.md](../architecture.md#universal-mode-layout) |
+| Why a layout decision is right | [[layout-and-ia]] (17 principles) |
+| Current DOM structure and phase classes | [[architecture]] |
 | What components look like now | Preview page (`/preview`) |
-| How to implement a new mode | [architecture.md](../architecture.md) (Adding a New Quiz Mode) |
-| Color, typography, spacing tokens | [visual-design.md](visual-design.md) (index) |
+| How to implement a new mode | [[architecture]] (Adding a New Quiz Mode) |
+| Color, typography, spacing tokens | [[visual-design]] (index) |
