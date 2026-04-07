@@ -25,8 +25,9 @@ feedback/       — User feedback and ideas
 references/     — External links, research
 screenshots/    — Periodic UI screenshots
 templates/      — Obsidian templates for each note type
-scripts/        — vault-note.ts and other tooling
 ```
+
+Tooling for this vault (vault-note, etc.) lives in `../trellis/`.
 
 ## Conventions
 
