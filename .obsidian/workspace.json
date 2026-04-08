@@ -6,6 +6,7 @@
       {
         "id": "61f87563b3a987b9",
         "type": "tabs",
+        "dimension": 46.30769230769231,
         "children": [
           {
             "id": "35579d449f13b1a1",
@@ -13,12 +14,76 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "backlogs/active.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "CLAUDE"
+              "title": "active"
+            }
+          },
+          {
+            "id": "d01e733ed02b3bfa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "backlog/backlog cleanup.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "backlog cleanup"
+            }
+          },
+          {
+            "id": "530a3638011a1f69",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "backlog/items/figure out ios build management for test flight and beyond.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "figure out ios build management for test flight and beyond"
+            }
+          }
+        ],
+        "currentTab": 1
+      },
+      {
+        "id": "bdafa38bb4b2dba8",
+        "type": "tabs",
+        "dimension": 53.69230769230769,
+        "children": [
+          {
+            "id": "2885798727643cd1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "inbox/2026-04-06 user feedback.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-04-06 user feedback"
+            }
+          },
+          {
+            "id": "6dccd21a72aa2391",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "inbox/2026-04-08 inbox.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-04-08 inbox"
             }
           }
         ]
@@ -94,7 +159,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "inbox/2026-04-06 user feedback.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +169,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for CLAUDE"
+              "title": "Backlinks for 2026-04-06 user feedback"
             }
           },
           {
@@ -113,12 +178,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "inbox/2026-04-06 user feedback.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from CLAUDE"
+              "title": "Outgoing links from 2026-04-06 user feedback"
             }
           },
           {
@@ -156,13 +221,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CLAUDE.md",
+                "file": "inbox/2026-04-06 user feedback.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of CLAUDE"
+              "title": "Outline of 2026-04-06 user feedback"
             }
           }
         ]
@@ -183,6 +248,36 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "35579d449f13b1a1",
-  "lastOpenFiles": []
+  "active": "2885798727643cd1",
+  "lastOpenFiles": [
+    "inbox/2026-04-08 inbox.md",
+    "inbox/2026-04-06 user feedback.md",
+    "backlog/backlog cleanup.md",
+    "backlog/items/figure out ios build management for test flight and beyond.md",
+    "backlog/items/show progression of automatization for a skill e g swipe scr.md",
+    "backlog/Backlog items.base",
+    "backlog/index.md",
+    "backlog/items/Add skill - intervals on fretboard.md",
+    "2026-04-07 Polish.md",
+    "backlog/items/key signature keyboard entry doesn t accept s for and no key.md",
+    "backlog/items/ios widget to encourage practice.md",
+    "backlog/items/web nav should be on top.md",
+    "backlog/items/try different shape for fretboard markers rounded rectangles.md",
+    "backlog/items/try adding repeat logo in the home background behind the car.md",
+    "backlog/items/remove dev panel link in ios builds.md",
+    "backlog/items/progress bar tap to explain card showing item breakdown fres.md",
+    "backlog/items/level card actions ux improve known skip discoverability.md",
+    "backlog/items/usememo stable id mutable objects are a no no signals.md",
+    "backlog/items/update preview page to reflect latest components.md",
+    "backlog/items/notice palette is weird in saturation review and perhaps use.md",
+    "backlog/items/better icon for all skills it s not a card grid.md",
+    "backlog/items/try allow learning fretboard by low med high frets instead o.md",
+    "backlog/items/test on ipad screen sizes better for fretboard.md",
+    "backlog/items/test on iphone se screen size fretboard gets squished too mu.md",
+    "backlog/items/settings page scroll bug on ios.md",
+    "backlog/items/refactor very long files.md",
+    "backlog/items",
+    "backlog/epics",
+    "backlog"
+  ]
 }

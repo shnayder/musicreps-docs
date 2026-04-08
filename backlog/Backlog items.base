@@ -1,0 +1,79 @@
+filters:
+  and:
+    - file.inFolder("backlog/items")
+properties:
+  id:
+    displayName: "#"
+  type:
+    displayName: Type
+  priority:
+    displayName: Pri
+views:
+  - type: table
+    name: All items
+    order:
+      - priority
+      - id
+      - file.name
+      - type
+      - status
+      - epic
+      - tags
+    sort:
+      - property: priority
+        direction: DESC
+    columnSize:
+      note.priority: 99
+      note.id: 50
+      file.name: 400
+      note.type: 120
+  - type: table
+    name: Open items
+    filters:
+      or:
+        - status == "open"
+        - status == "active"
+    order:
+      - priority
+      - id
+      - file.name
+      - type
+      - status
+      - epic
+    sort:
+      - property: priority
+        direction: DESC
+    columnSize:
+      note.priority: 103
+      note.id: 50
+      file.name: 400
+      note.type: 120
+  - type: cards
+    name: Board
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - priority
+      - file.name
+      - type
+      - epic
+  - type: table
+    name: By epic
+    groupBy:
+      property: epic
+      direction: ASC
+    order:
+      - priority
+      - id
+      - file.name
+      - type
+      - status
+    sort:
+      - property: priority
+        direction: DESC
+    columnSize:
+      note.priority: 99
+      note.id: 50
+      file.name: 400
+      note.type: 120

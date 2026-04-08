@@ -11,6 +11,7 @@ the same repo.
 ## Structure
 
 ```
+backlog/        — Tracked work items and epics (see below)
 inbox/          — Landing zone for notes needing review
 decisions/      — "We chose X because Y"
 conventions/    — "Always do it this way"
@@ -20,7 +21,7 @@ observations/   — Things noticed that might matter
 sessions/       — Agent session summaries
 guides/         — Reference docs (architecture, coding style, design, etc.)
 plans/          — Design docs, product specs, execution plans
-backlogs/       — Per-workstream backlogs
+backlogs/       — Per-workstream backlogs (legacy, being replaced by backlog/)
 feedback/       — User feedback and ideas
 references/     — External links, research
 screenshots/    — Periodic UI screenshots
@@ -29,9 +30,50 @@ templates/      — Obsidian templates for each note type
 
 Tooling for this vault (vault-note, etc.) lives in `../trellis/`.
 
+## Backlog system
+
+Tracked work lives in `backlog/`. Structure:
+
+```
+backlog/
+  _counter.md        — Next available ID (increment after creating an item)
+  index.md           — Dataview-powered dashboard
+  epics/             — Grouping pages (one per epic)
+  items/             — Individual features, bugs, tasks (one per file)
+```
+
+### Item frontmatter schema
+
+```yaml
+id: 33                # Sequential integer, from _counter.md
+date: 2026-04-08
+type: "🛠️ feature"   # 🛠️ feature | 🐞 bug | ☑️ task
+epic:                 # [[epic-name]] wikilink, or empty
+status: open          # open | active | done | deferred
+priority: "❗❗"       # ❗❗❗ | ❗❗ | ❗
+tags: []
+```
+
+### Creating items
+
+- **In Obsidian**: Use Templater → `backlog-item` template. Set the `id`
+  from `_counter.md` and increment the counter.
+- **From CLI/agents**: Create `backlog/items/NNN-slug.md` with the
+  frontmatter above. Always read and increment `_counter.md`.
+- **Epic template**: `templates/epic.md`. Epics include a Dataview query
+  that auto-lists their child items.
+
+### Conventions
+
+- Filename format: `short descriptive name.md` (e.g. `ios build management.md`)
+- Tasks that are sub-steps of a feature live as `- [ ]` checkboxes inside
+  that feature's note, not as separate items
+- `td-id` field preserves the original td tracker ID for migrated items
+
 ## Conventions
 
 - Use `[[wikilinks]]` for cross-references within this vault
 - Use standard markdown links for references to code-repo files
 - All notes have YAML frontmatter with at least `date`, `type`, and `status`
 - See `templates/` for the full schema of each note type
+
