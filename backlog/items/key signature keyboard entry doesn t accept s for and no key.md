@@ -1,11 +1,11 @@
 ---
 id: 32
 date: 2026-04-01
-type: "🐞 bug"
+type: 🐞 bug
 epic:
 status: open
-priority: "❗"
-tags: []
+priority: ❗
+tags:
 td-id: td-c6126d
 ---
 

@@ -1,4 +1,4 @@
-Emoji ideas -- pick, put in reference materials
+Emojis for feedback review and otherwise, put in reference materials:
 
 ⚡️ - decision. 
 🔍 - needs a closer look — next action is starting a design/investigation/review
@@ -7,8 +7,8 @@ Emoji ideas -- pick, put in reference materials
  **🔜** — to backlog
  **⏳** — waiting
  🗄️ — to someday list
-**🚩** — high priority
- **🧊** — icebox / low priority
+ **❗❗❗** — high priority
+ **❗** — icebox / low priority
 **🐞** — bug
 🛠️ — feature
 🧰 — epic

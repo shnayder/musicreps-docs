@@ -2,8 +2,8 @@
 id: 21
 date: 2026-04-04
 type: 🐞 bug
-epic:
-status: open
+epic: "[[pre-launch polish]]"
+status: review
 priority: ❗❗
 tags: []
 td-id: td-42932c

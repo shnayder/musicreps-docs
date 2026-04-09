@@ -1,11 +1,11 @@
 ---
 id: 17
 date: 2026-04-01
-type: "☑️ task"
+type: "🛠️ feature"
 epic:
-status: open
+status: done
 priority: "❗❗"
-tags: [v2]
+tags: []
 td-id: td-e166e9
 ---
 # Show progression of automatization for a skill. 

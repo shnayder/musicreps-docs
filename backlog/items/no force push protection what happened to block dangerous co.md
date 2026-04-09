@@ -1,10 +1,10 @@
 ---
 id: 3
 date: 2026-04-04
-type: 🐞 bug
+type: "🐞 bug"
 epic:
 status: closed
-priority: ❗❗❗
+priority: "❗❗❗"
 tags: []
 td-id: td-b62781
 ---

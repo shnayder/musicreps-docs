@@ -6,34 +6,20 @@
       {
         "id": "61f87563b3a987b9",
         "type": "tabs",
-        "dimension": 46.30769230769231,
+        "dimension": 58.13237557721909,
         "children": [
           {
-            "id": "35579d449f13b1a1",
+            "id": "75e205cfd8750fd6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "backlogs/active.md",
+                "file": "backlog/items/add text labels below nav icons.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "active"
-            }
-          },
-          {
-            "id": "d01e733ed02b3bfa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "backlog/backlog cleanup.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "backlog cleanup"
+              "title": "add text labels below nav icons"
             }
           },
           {
@@ -49,31 +35,114 @@
               "icon": "lucide-file",
               "title": "figure out ios build management for test flight and beyond"
             }
-          }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "bdafa38bb4b2dba8",
-        "type": "tabs",
-        "dimension": 53.69230769230769,
-        "children": [
+          },
           {
-            "id": "2885798727643cd1",
+            "id": "cc4c6d7975dae903",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "backlog/Backlog items.base",
+                "viewName": "By epic"
+              },
+              "icon": "lucide-table",
+              "title": "Backlog items"
+            }
+          },
+          {
+            "id": "579f12c12220df45",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "inbox/2026-04-06 user feedback.md",
+                "file": "backlog/items/review recommendations logic and language.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-04-06 user feedback"
+              "title": "review recommendations logic and language"
             }
           },
           {
-            "id": "6dccd21a72aa2391",
+            "id": "a70c85af051edb1e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "backlog/items/review screen headers and IA.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "review screen headers and IA"
+            }
+          },
+          {
+            "id": "882579bc42e390b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "backlog/inventory/recommendation-strings.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "recommendation-strings"
+            }
+          },
+          {
+            "id": "eafd75f4cb309922",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "plans/design-docs/2026-04-08-practice-tab-redesign.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-04-08-practice-tab-redesign"
+            }
+          }
+        ],
+        "currentTab": 2
+      },
+      {
+        "id": "bdafa38bb4b2dba8",
+        "type": "tabs",
+        "dimension": 41.86762442278091,
+        "children": [
+          {
+            "id": "9b15d0a95df40ae0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "inbox/2026-04-09 inbox.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-04-09 inbox"
+            }
+          },
+          {
+            "id": "abc774cb9d87ca2c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "plans/product-specs/active/2026-04-08-store-screenshots-plan.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-04-08-store-screenshots-plan"
+            }
+          },
+          {
+            "id": "ed19113e39937e7d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -84,6 +153,20 @@
               },
               "icon": "lucide-file",
               "title": "2026-04-08 inbox"
+            }
+          },
+          {
+            "id": "c5a9ab19dfd9e3dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "inbox/2026-04-08 inbox - processed.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "2026-04-08 inbox - processed"
             }
           }
         ]
@@ -159,7 +242,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "inbox/2026-04-06 user feedback.md",
+                "file": "backlog/items/nav predictability skill card always opens practice tab.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +252,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 2026-04-06 user feedback"
+              "title": "Backlinks for nav predictability skill card always opens practice tab"
             }
           },
           {
@@ -178,12 +261,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "inbox/2026-04-06 user feedback.md",
+                "file": "backlog/items/nav predictability skill card always opens practice tab.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 2026-04-06 user feedback"
+              "title": "Outgoing links from nav predictability skill card always opens practice tab"
             }
           },
           {
@@ -221,16 +304,29 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "inbox/2026-04-06 user feedback.md",
+                "file": "backlog/items/nav predictability skill card always opens practice tab.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 2026-04-06 user feedback"
+              "title": "Outline of nav predictability skill card always opens practice tab"
+            }
+          },
+          {
+            "id": "eec237e04ba9c168",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "inbox/2026-04-09 inbox.md"
+              },
+              "icon": "lucide-info",
+              "title": "File properties for 2026-04-09 inbox"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -248,34 +344,37 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "2885798727643cd1",
+  "active": "9b15d0a95df40ae0",
   "lastOpenFiles": [
-    "inbox/2026-04-08 inbox.md",
-    "inbox/2026-04-06 user feedback.md",
-    "backlog/backlog cleanup.md",
-    "backlog/items/figure out ios build management for test flight and beyond.md",
-    "backlog/items/show progression of automatization for a skill e g swipe scr.md",
+    "Pasted image 20260408230551.png",
     "backlog/Backlog items.base",
-    "backlog/index.md",
-    "backlog/items/Add skill - intervals on fretboard.md",
-    "2026-04-07 Polish.md",
-    "backlog/items/key signature keyboard entry doesn t accept s for and no key.md",
-    "backlog/items/ios widget to encourage practice.md",
-    "backlog/items/web nav should be on top.md",
-    "backlog/items/try different shape for fretboard markers rounded rectangles.md",
-    "backlog/items/try adding repeat logo in the home background behind the car.md",
-    "backlog/items/remove dev panel link in ios builds.md",
-    "backlog/items/progress bar tap to explain card showing item breakdown fres.md",
+    "backlog/items/review recommendations logic and language.md",
+    "backlog/items/review screen headers and IA.md",
     "backlog/items/level card actions ux improve known skip discoverability.md",
-    "backlog/items/usememo stable id mutable objects are a no no signals.md",
-    "backlog/items/update preview page to reflect latest components.md",
-    "backlog/items/notice palette is weird in saturation review and perhaps use.md",
+    "backlog/items/Create v1-ready app screenshots for app stores.md",
+    "backlog/items/improve principles based ui iterate tool.md",
+    "inbox/2026-04-08 inbox - processed.md",
+    "inbox/2026-04-08 inbox.md",
+    "inbox/2026-04-09 inbox.md",
+    "plans/product-specs/active/2026-04-08-store-screenshots-plan.md",
+    "backlog/items/try adding repeat logo in the home background behind the car.md",
+    "backlog/_counter.md",
+    "backlog/Untitled.md",
+    "plans/design-docs/2026-04-08-practice-tab-redesign.md",
+    "backlog/inventory/recommendation-strings.md",
+    "backlog/inventory",
+    "inventory",
+    "backlog/items/speed check button needs bottom margin on small screens.md",
+    "backlog/items/Untitled.md",
     "backlog/items/better icon for all skills it s not a card grid.md",
-    "backlog/items/try allow learning fretboard by low med high frets instead o.md",
-    "backlog/items/test on ipad screen sizes better for fretboard.md",
-    "backlog/items/test on iphone se screen size fretboard gets squished too mu.md",
-    "backlog/items/settings page scroll bug on ios.md",
-    "backlog/items/refactor very long files.md",
+    "backlog/items/nav predictability skill card always opens practice tab.md",
+    "backlog/items/review text descriptions for all skills.md",
+    "backlog/items/add text labels below nav icons.md",
+    "backlog/items/all skills hint text should be actionable.md",
+    "backlog/epics/pre-launch polish.md",
+    "backlog/epics/pre-launch tooling.md",
+    "backlog/items/figure out ios build management for test flight and beyond.md",
+    "backlog/items/ipad fretboard max size cap.md",
     "backlog/items",
     "backlog/epics",
     "backlog"

@@ -1,11 +1,12 @@
 ---
 id: 10
 date: 2026-03-25
-type: "☑️ task"
+type: "🛠️ feature"
 epic:
 status: open
 priority: "❗❗"
-tags: []
+tags:
+  - tech-debt
 td-id: td-0132b1
 ---
 

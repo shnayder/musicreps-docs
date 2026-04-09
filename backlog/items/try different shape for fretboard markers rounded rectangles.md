@@ -1,11 +1,11 @@
 ---
 id: 29
 date: 2026-04-01
-type: "☑️ task"
+type: "🛠️ feature"
 epic:
 status: open
 priority: "❗"
-tags: [v2]
+tags: []
 td-id: td-32f22f
 ---
 

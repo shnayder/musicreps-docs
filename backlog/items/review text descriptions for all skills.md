@@ -1,10 +1,10 @@
 ---
 id: 4
 date: 2026-03-25
-type: "☑️ task"
-epic:
-status: open
-priority: "❗❗❗"
+type: 🛠️ feature
+epic: "[[pre-launch polish]]"
+status: done
+priority: ❗❗❗
 tags: []
 td-id: td-d8899c
 ---

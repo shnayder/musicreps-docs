@@ -3,9 +3,9 @@ id: 20
 date: 2026-04-01
 type: "🛠️ feature"
 epic:
-status: open
+status: done
 priority: "❗❗"
-tags: [v2]
+tags: []
 td-id: td-92c4ab
 ---
 

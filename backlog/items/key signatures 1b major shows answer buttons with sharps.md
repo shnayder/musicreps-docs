@@ -2,7 +2,7 @@
 id: 12
 date: 2026-04-01
 type: "🐞 bug"
-epic:
+epic: "[[pre-launch polish]]"
 status: open
 priority: "❗❗"
 tags: []

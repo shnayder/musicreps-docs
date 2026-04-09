@@ -3,7 +3,7 @@ id: 16
 date: 2026-04-01
 type: "🐞 bug"
 epic:
-status: open
+status: done
 priority: "❗❗"
 tags: []
 td-id: td-012bf9

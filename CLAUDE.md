@@ -19,7 +19,8 @@ debt/           — Known issues deferred intentionally
 questions/      — Open questions parked for later
 observations/   — Things noticed that might matter
 sessions/       — Agent session summaries
-guides/         — Reference docs (architecture, coding style, design, etc.)
+inventory/      - Inventories of current state (strings, components, algorithms). Not filled out yet.
+guides/         — Instructions for how to do things (architecture, coding style, design, etc.). 
 plans/          — Design docs, product specs, execution plans
 backlogs/       — Per-workstream backlogs (legacy, being replaced by backlog/)
 feedback/       — User feedback and ideas
@@ -39,7 +40,7 @@ backlog/
   _counter.md        — Next available ID (increment after creating an item)
   index.md           — Dataview-powered dashboard
   epics/             — Grouping pages (one per epic)
-  items/             — Individual features, bugs, tasks (one per file)
+  items/             — Individual features and bugs (one per file)
 ```
 
 ### Item frontmatter schema
@@ -47,19 +48,22 @@ backlog/
 ```yaml
 id: 33                # Sequential integer, from _counter.md
 date: 2026-04-08
-type: "🛠️ feature"   # 🛠️ feature | 🐞 bug | ☑️ task
+type: "🛠️ feature"   # 🛠️ feature | 🐞 bug
 epic:                 # [[epic-name]] wikilink, or empty
 status: open          # open | active | done | deferred
 priority: "❗❗"       # ❗❗❗ | ❗❗ | ❗
-tags: []
+tags: 
+   - tooling
+   - mobile
+   - etc
 ```
 
 ### Creating items
 
 - **In Obsidian**: Use Templater → `backlog-item` template. Set the `id`
   from `_counter.md` and increment the counter.
-- **From CLI/agents**: Create `backlog/items/NNN-slug.md` with the
-  frontmatter above. Always read and increment `_counter.md`.
+- **From CLI/agents**: Create `backlog/items/short descriptive name.md`
+  with the frontmatter above. Always read and increment `_counter.md`.
 - **Epic template**: `templates/epic.md`. Epics include a Dataview query
   that auto-lists their child items.
 
@@ -68,7 +72,6 @@ tags: []
 - Filename format: `short descriptive name.md` (e.g. `ios build management.md`)
 - Tasks that are sub-steps of a feature live as `- [ ]` checkboxes inside
   that feature's note, not as separate items
-- `td-id` field preserves the original td tracker ID for migrated items
 
 ## Conventions
 

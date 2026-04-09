@@ -1,5 +1,8 @@
 {
   "useMarkdownLinks": false,
   "newLinkFormat": "shortest",
-  "showFrontmatter": true
+  "showFrontmatter": true,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "showUnsupportedFiles": true
 }

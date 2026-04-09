@@ -1,10 +1,10 @@
 ---
 id: 7
 date: 2026-04-01
-type: 🛠️ feature
+type: "🛠️ feature"
 epic:
 status: open
-priority: ❗
+priority: "❗"
 tags:
   - v2
 td-id: td-30b56f

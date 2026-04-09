@@ -1,8 +1,8 @@
 ---
 id: 19
 date: 2026-04-01
-type: "☑️ task"
-epic:
+type: "🛠️ feature"
+epic: "[[pre-launch polish]]"
 status: open
 priority: "❗❗"
 tags: []

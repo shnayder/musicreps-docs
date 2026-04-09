@@ -5,7 +5,7 @@ type: "🛠️ feature"
 epic:
 status: open
 priority: "❗❗❗"
-tags: [v2]
+tags: []
 td-id: td-4cf0e6
 ---
 

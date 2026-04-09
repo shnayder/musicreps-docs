@@ -18,7 +18,6 @@ views:
       - type
       - status
       - epic
-      - tags
     sort:
       - property: priority
         direction: DESC
@@ -40,6 +39,7 @@ views:
       - type
       - status
       - epic
+      - tags
     sort:
       - property: priority
         direction: DESC
@@ -59,7 +59,30 @@ views:
       - type
       - epic
   - type: table
+    name: Imported
+    filters:
+      and:
+        - status != "done"
+        - tags.contains("imported")
+    order:
+      - priority
+      - id
+      - file.name
+      - type
+      - status
+      - epic
+      - tags
+    columnSize:
+      note.priority: 111
+      note.id: 50
+      file.name: 400
+      note.type: 120
+  - type: table
     name: By epic
+    filters:
+      and:
+        - |
+          !status.containsAny("done","closed")
     groupBy:
       property: epic
       direction: ASC
@@ -69,9 +92,12 @@ views:
       - file.name
       - type
       - status
+      - tags
     sort:
       - property: priority
         direction: DESC
+      - property: status
+        direction: ASC
     columnSize:
       note.priority: 99
       note.id: 50

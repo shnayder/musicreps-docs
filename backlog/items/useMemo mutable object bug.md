@@ -5,7 +5,8 @@ type: "🐞 bug"
 epic:
 status: open
 priority: "❗❗"
-tags: []
+tags:
+  - tech-debt
 td-id: td-1b62ec
 ---
 
