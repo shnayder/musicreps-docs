@@ -147,6 +147,11 @@ dedicated port (8003–8007) to avoid conflicts. Shared helpers in
 The `?roundMs=N` query parameter overrides the 60-second round timer (e.g.,
 `?roundMs=5000` for 5s rounds). Useful in both E2E tests and manual testing.
 
+The `?native` query parameter simulates native-app mode in a desktop browser:
+adds the `native-app` body class, hiding the text input, keyboard hint, and
+"Space for next" hint. Combine with DevTools device emulation (e.g., iPhone SE
+375×667) to test the mobile-native layout without a real device.
+
 #### What to E2E test
 
 - **Cross-cutting user flows** — quiz start → answer → feedback → next → stop.
