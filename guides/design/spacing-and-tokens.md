@@ -51,6 +51,20 @@ for `LayoutMain`. It references `--pad-region` by default and flips to
 pattern as colors, added only when a component needs compact/comfortable
 variants.
 
+### Using spacing in components
+
+Prefer the `<Stack>` component over manual `display: flex; flex-direction:
+column; gap:` declarations. Stack maps gap names directly to semantic tokens:
+
+```tsx
+<Stack gap='group'>   // gap: var(--gap-group)
+<Stack gap='related'> // gap: var(--gap-related)
+```
+
+For containment (padding + background + border), use `<Card>` or
+`<Card variant='well'>` instead of bespoke classes. See [[components]] for
+the full taxonomy.
+
 ### Adjusting breathing room
 
 To give the whole app more (or less) space, shift the 4 "spacious" semantic

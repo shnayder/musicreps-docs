@@ -3,10 +3,9 @@ id: 37
 date: 2026-04-08
 type: 🛠️ feature
 epic: "[[pre-launch polish]]"
-status: review
+status: done
 priority: ❗❗
 tags:
-  - launch
 ---
 
 # Add small text labels below nav icons

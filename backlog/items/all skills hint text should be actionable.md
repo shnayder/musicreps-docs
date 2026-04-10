@@ -3,10 +3,9 @@ id: 35
 date: 2026-04-08
 type: 🛠️ feature
 epic: "[[pre-launch polish]]"
-status: review
+status: done
 priority: ❗❗
 tags:
-  - launch
   - quick
 ---
 

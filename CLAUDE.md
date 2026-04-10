@@ -41,6 +41,7 @@ backlog/
   index.md           — Dataview-powered dashboard
   epics/             — Grouping pages (one per epic)
   items/             — Individual features and bugs (one per file)
+  ideas/             — Lightweight idea cards (no ID, not committed work)
 ```
 
 ### Item frontmatter schema

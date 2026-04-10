@@ -3,7 +3,7 @@ id: 39
 date: 2026-04-08
 type: 🛠️ feature
 epic: "[[pre-launch polish]]"
-status: open
+status: done
 priority: ❗❗
 tags:
   - design
@@ -103,6 +103,7 @@ become "Practice scope" if we add more config options.
   items"). It's ok, but a bit confusing at first. e.g. "Start Seconds (m2, M2) — 48 new items". On first load, I may have no idea what Seconds are, certainly don't know what the set of levels is, whether this is the first one, what the others will be, etc. 
 	- ⚡️ Let's remove the "48 new items". It's not clearly helpful. If people want, we can bring it back using the custom setup pattern (in the practice button)
 	- 🔍 Perhaps "Start first level: {level long label}". Inventory: [[recommendation-strings]]. 
+	- ⚡️Going to include this as part of [[review recommendations logic and language]]
 ### Screens that are fine
 
 - **Home tabs**: Active Skills, All Skills, About, Settings — all have clear

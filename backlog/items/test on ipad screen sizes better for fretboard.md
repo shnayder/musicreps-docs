@@ -1,10 +1,10 @@
 ---
 id: 19
 date: 2026-04-01
-type: "🛠️ feature"
-epic: "[[pre-launch polish]]"
+type: 🛠️ feature
+epic:
 status: open
-priority: "❗❗"
+priority: ❗❗
 tags: []
 td-id: td-df2f22
 ---

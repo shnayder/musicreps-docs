@@ -29,6 +29,47 @@ with a specific class for everything else — answer buttons have feedback
 semantics, toggles have pressed state, tabs have ARIA roles, and small actions
 have intentionally quieter styling.
 
+## Layout Primitives
+
+Composable building blocks that own spacing and containment, so content
+elements don't need one-off margin/padding classes. Source:
+`src/ui/layout.tsx` + CSS section 2c.
+
+| Component | Role | CSS |
+|-----------|------|-----|
+| `<Stack gap='group'>` | Flex column with semantic gap | `.stack.stack-group` |
+| `<Card>` | Container surface (white, bordered, padded) | `.card` |
+| `<Card variant='well'>` | Inset/recessed surface | `.card.card-well` |
+| `<Card accent='brand'>` | Left-stripe brand accent | `.card.card-accent-brand` |
+| `<Card accent='notice'>` | Left-stripe notice accent | `.card.card-accent-notice` |
+| `<Section heading='...'>` | Heading + content with consistent gap | `.section-block` |
+
+**Stack gap values** map to semantic spacing tokens:
+
+| Gap | Token | Typical use |
+|-----|-------|-------------|
+| `micro` | `--gap-micro` (2px) | Icon + label coupling |
+| `related` | `--gap-related` (4px) | Label + value pairs |
+| `group` | `--gap-group` (12px) | Distinct groups within container |
+| `component` | `--pad-component` (16px) | Card-internal section breaks |
+| `region` | `--pad-region` (24px) | Layout region padding |
+| `section` | `--gap-section` (32px) | Page-level separators |
+
+**When to use Stack vs raw flex:** Use `<Stack>` for any vertical list of
+elements that need consistent spacing. Use raw `flex` only when you need
+horizontal layout, non-uniform gaps, or flex properties beyond column + gap.
+
+**When to use Card vs raw div:** Use `<Card>` for any container that needs
+the standard card treatment (background + border + radius + padding). This
+replaces `.practice-card`, `.level-progress-card`, etc.
+
+### Toggle Base
+
+All filter toggles (string, distance, notes) share a `.toggle-btn` base class.
+Specific classes (`.string-toggle`, `.distance-toggle`, `.notes-toggle`) add
+only unique overrides (width, padding). Always apply both:
+`class='toggle-btn distance-toggle'`.
+
 ## Info Hierarchy Pattern
 
 When displaying a metric with context, use the **label: value / explanation**
