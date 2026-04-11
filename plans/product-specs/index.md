@@ -1,6 +1,6 @@
 # Product Specs
 
-Specs describing **what** to build and **why** — new quiz modes, UX flows, and
+Specs describing **what** to build and **why** — new skills, UX flows, and
 feature designs from the user's perspective.
 
 See [[feature-process|guides/feature-process.md]] for the design
