@@ -80,4 +80,6 @@ tags:
 - Use standard markdown links for references to code-repo files
 - All notes have YAML frontmatter with at least `date`, `type`, and `status`
 - See `templates/` for the full schema of each note type
+- Commit after each change or coherent set of changes — don't batch up many
+  unrelated edits into one big commit
 
