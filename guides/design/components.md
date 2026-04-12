@@ -70,6 +70,34 @@ Specific classes (`.string-toggle`, `.distance-toggle`, `.notes-toggle`) add
 only unique overrides (width, padding). Always apply both:
 `class='toggle-btn distance-toggle'`.
 
+## Modal
+
+Centered dialog over a semi-transparent backdrop. Source: `src/ui/modal.tsx`.
+
+| Prop | Type | Purpose |
+|------|------|---------|
+| `title` | `string` | Heading shown in the modal header |
+| `open` | `boolean` | Controlled visibility |
+| `onClose` | `() => void` | Called on backdrop click, Escape, or close button |
+| `children` | `ComponentChildren` | Body content |
+
+**Stacking:** Modal renders via `createPortal` to `document.body`, bypassing
+all intermediate stacking contexts (`isolation: isolate` on `.layout-main`,
+footer z-ordering, etc.). The backdrop uses `z-index: var(--z-modal)` (100).
+This guarantees the modal dims everything underneath, including the tab bar.
+
+**Z-index tokens** (`:root` in styles.css):
+
+| Token | Value | Use |
+|-------|-------|-----|
+| `--z-raised` | 1 | Elements raised within their container (e.g., star button) |
+| `--z-modal` | 100 | Modal backdrop — paints above all normal content |
+
+**Rule:** Never use raw z-index numbers. Always use a token. If a new layer
+is needed, add a token to the scale.
+
+**Dismiss:** Three ways — tap backdrop, tap close button, press Escape.
+
 ## Info Hierarchy Pattern
 
 When displaying a metric with context, use the **label: value / explanation**
