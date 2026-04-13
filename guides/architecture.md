@@ -341,20 +341,13 @@ See [Algorithms](#recommendation-pipeline-v4-1) below for the full algorithm.
 Lives in `adaptive.ts`. Creates a weighted random selector that prioritizes
 items the user is slowest on, with exploration of unseen items.
 
+See [[item-selection]] for the full behavior and implementation inventory of
+within-level item selection (weighting, no-repeat, scope interaction, etc.).
+
 `createAdaptiveSelector(config, storageAdapter)` — factory with injected storage
 (localStorage adapter in browser, `Map` adapter in tests) and optional injected
-RNG for deterministic testing.
-
-Key behaviors:
-
-- **Unseen items** get `unseenBoost` weight (exploration)
-- **Seen items** get `ewma / minTime` weight (slower = more practice)
-- No extra multiplier for low-sample items (this was a bug that caused startup
-  ruts — new items would get drilled excessively)
-- Response times clamped to `maxResponseTime` to reject outliers
-- Last-selected item gets weight 0 (no immediate repeats)
-- `updateConfig(newCfg)` / `getConfig()` allow runtime config changes (used by
-  calibration to apply scaled thresholds)
+RNG for deterministic testing. `updateConfig(newCfg)` / `getConfig()` allow
+runtime config changes (used by calibration to apply scaled thresholds).
 
 ### Motor Baseline Calibration
 
