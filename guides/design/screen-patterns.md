@@ -85,15 +85,20 @@ inset; children fill the remaining space.**
 │     safe-area-inset-top       │  body padding-top
 ├───────────────────────────────┤
 │  ┌─────────────────────────┐  │
-│  │ .screen-layout           │  │  height: calc(100dvh - inset-top)
+│  │ #app                     │  │  height: calc(100dvh - inset-top)
 │  │  ┌───────────────────┐  │  │
-│  │  │ .layout-header     │  │  │  flex-shrink: 0
+│  │  │ .brand-strip       │  │  │  flex-shrink: 0 (web only)
 │  │  ├───────────────────┤  │  │
-│  │  │ .layout-main       │  │  │  flex: 1
-│  │  ├───────────────────┤  │  │
-│  │  │ .layout-footer     │  │  │  flex-shrink: 0
-│  │  │  .mode-nav         │  │  │
-│  │  │  pb: inset-bottom  │  │  │  ← home indicator clearance
+│  │  │ .screen-layout     │  │  │  flex: 1; min-height: 0
+│  │  │  ┌─────────────┐   │  │  │
+│  │  │  │ layout-header│  │  │  │  flex-shrink: 0
+│  │  │  ├─────────────┤   │  │  │
+│  │  │  │ layout-main  │  │  │  │  flex: 1
+│  │  │  ├─────────────┤   │  │  │
+│  │  │  │ layout-footer│  │  │  │  flex-shrink: 0
+│  │  │  │  .mode-nav    │  │  │  │
+│  │  │  │  pb: inset-bot│  │  │  │  ← home indicator clearance
+│  │  │  └─────────────┘   │  │  │
 │  │  └───────────────────┘  │  │
 │  └─────────────────────────┘  │
 └───────────────────────────────┘  ← 100dvh
@@ -105,10 +110,13 @@ Key invariants:
   content below the notch/status bar.
 - **Bottom inset: `.mode-nav` owns it.** `padding-bottom: env(safe-area-inset-bottom)`
   provides clearance from the home indicator. Body padding-bottom is `0`.
-- **`.screen-layout`** uses `height: calc(100dvh - env(safe-area-inset-top, 0px))`
-  — an absolute value that works regardless of DOM nesting. It spans from below
-  the notch to the bottom of the viewport; mode-nav's padding keeps tabs above
-  the home indicator within that space.
+- **`#app` is the viewport anchor.** It uses `height: calc(100dvh -
+  env(safe-area-inset-top, 0px))` so the total available vertical space is
+  fixed regardless of how many siblings live inside (brand strip, screen
+  layout, etc.). All descendants use flex:1 + min-height:0 to fill from there.
+  `.screen-layout` is just a flex child now — not the anchor — so it composes
+  correctly when other siblings (e.g. a persistent brand strip on web) sit
+  above it inside `#app`.
 - **Each inset is applied exactly once.** No component should add safe-area
   padding that another component already handles.
 - **On desktop** (no safe-area insets), all `env()` values resolve to `0` and
@@ -214,13 +222,15 @@ content leaf. Every flex child in the chain has `flex: 1; min-height: 0` so it
 fills remaining space and can shrink below its content size.
 
 ```
-.screen-layout           height: calc(100dvh - inset-top)  ← anchor
-  .layout-header         flex-shrink: 0                     ← natural
-  .layout-main-fixed     flex: 1; min-height: 0             ← fills
-    .mode-screen.active  flex: 1; min-height: 0             ← fills
-      .quiz-area         flex: 1; min-height: 0             ← fills
-        .quiz-content    flex: 1; min-height: 0             ← fills
-          .quiz-stage    flex: 1; min-height: 0             ← fills
+#app                     height: calc(100dvh - inset-top)  ← anchor
+  .brand-strip           flex-shrink: 0                     ← natural (web only)
+  .screen-layout         flex: 1; min-height: 0             ← fills
+    .layout-header       flex-shrink: 0                     ← natural
+    .layout-main-fixed   flex: 1; min-height: 0             ← fills
+      .mode-screen.active  flex: 1; min-height: 0           ← fills
+        .quiz-area       flex: 1; min-height: 0             ← fills
+          .quiz-content  flex: 1; min-height: 0             ← fills
+            .quiz-stage  flex: 1; min-height: 0             ← fills
             .prompt      flex: 3; min-height: 0             ← 60%
               text       flex-shrink: 0                     ← natural
               fretboard  flex: 1; min-height: 0             ← remainder
