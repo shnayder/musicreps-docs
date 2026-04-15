@@ -3,7 +3,7 @@ id: 54
 date: 2026-04-09
 type: 🐞 bug
 epic: "[[marketing materials for launch]]"
-status: open
+status: done
 priority: ❗❗
 tags:
 ---

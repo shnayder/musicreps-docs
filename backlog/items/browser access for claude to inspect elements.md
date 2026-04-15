@@ -1,13 +1,12 @@
 ---
 id: 69
 date: 2026-04-09
-type: "🛠️ feature"
+type: 🛠️ feature
 epic:
 status: open
-priority: "❗"
+priority: ❗
 tags:
   - tooling
-  - imported
 ---
 
 # Browser access for Claude to inspect elements

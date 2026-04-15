@@ -1,10 +1,10 @@
 ---
 id: 26
 date: 2026-03-25
-type: "🛠️ feature"
+type: 🛠️ feature
 epic: "[[pre-launch polish]]"
-status: open
-priority: "❗"
+status: done
+priority: ❗
 tags: []
 td-id: td-0ff5e4
 ---

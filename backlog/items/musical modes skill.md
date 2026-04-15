@@ -4,7 +4,7 @@ date: 2026-04-08
 type: 🛠️ feature
 epic:
 status: open
-priority: ❗
+priority: ❗❗
 tags:
   - music
 ---

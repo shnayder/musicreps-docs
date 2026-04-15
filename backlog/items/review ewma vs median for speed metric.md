@@ -1,13 +1,12 @@
 ---
 id: 82
 date: 2026-04-13
-type: "🛠️ feature"
+type: 🛠️ feature
 epic:
 status: open
-priority: "❗"
+priority: ❗❗
 tags:
   - algorithm
-  - imported
 ---
 
 # Review EWMA vs median for speed metric

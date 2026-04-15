@@ -3,7 +3,7 @@ id: 40
 date: 2026-04-08
 type: 🛠️ feature
 epic: "[[pre-launch polish]]"
-status: review
+status: done
 priority: ❗❗❗
 tags:
   - learning-model

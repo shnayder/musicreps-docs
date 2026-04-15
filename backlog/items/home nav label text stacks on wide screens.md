@@ -3,7 +3,7 @@ id: 47
 date: 2026-04-09
 type: 🐞 bug
 epic: "[[pre-launch polish]]"
-status: review
+status: done
 priority: ❗❗
 tags:
   - quick

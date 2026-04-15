@@ -3,7 +3,7 @@ id: 50
 date: 2026-04-09
 type: 🛠️ feature
 epic: "[[pre-launch polish]]"
-status: ready
+status: done
 priority: ❗❗
 tags:
 ---

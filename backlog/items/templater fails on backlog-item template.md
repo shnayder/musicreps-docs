@@ -1,13 +1,12 @@
 ---
 id: 64
 date: 2026-04-09
-type: "🐞 bug"
-epic: "[[pre-launch tooling]]"
+type: 🐞 bug
+epic:
 status: open
-priority: "❗❗"
+priority: ❗❗
 tags:
   - tooling
-  - imported
 ---
 
 # Templater fails on backlog-item template

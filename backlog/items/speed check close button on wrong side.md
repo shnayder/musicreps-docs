@@ -1,13 +1,12 @@
 ---
 id: 68
 date: 2026-04-09
-type: "🐞 bug"
+type: 🐞 bug
 epic: "[[pre-launch polish]]"
-status: open
-priority: "❗❗"
+status: closed
+priority: ❗❗
 tags:
   - design
-  - imported
 ---
 
 # Speed check close button on wrong side

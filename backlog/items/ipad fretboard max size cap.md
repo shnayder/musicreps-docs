@@ -3,7 +3,7 @@ id: 45
 date: 2026-04-08
 type: 🐞 bug
 epic:
-status: open
+status: done
 priority: ❗❗
 tags:
   - mobile

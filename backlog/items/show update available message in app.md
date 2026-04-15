@@ -1,13 +1,13 @@
 ---
 id: 67
 date: 2026-04-09
-type: "🛠️ feature"
+type: 🛠️ feature
 epic:
 status: open
-priority: "❗"
+priority: ❗
 tags:
   - ux
-  - imported
+  - design
 ---
 
 # Show "update available" message in app
