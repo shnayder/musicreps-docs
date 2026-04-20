@@ -15,6 +15,8 @@ restart.
 App launch
   |
   Native plugin (OTAUpdatePlugin) decides what to load:
+  +-- bundled-version gate: compare bundled-version.txt vs cached OTA version
+  |     bundled >= OTA or dev build --> discard stale OTA, use bundled
   +-- cached update (healthy)                --> load from Library/ota/current/
   +-- cached update (pending, attempts < 2)  --> retry from Library/ota/current/
   +-- cached update (pending, attempts >= 2) --> delete update, fall back to bundled
@@ -46,9 +48,13 @@ git checkout main && git pull
 # 2. Tag the release
 git tag release-v<N>    # e.g. release-v1, release-v2
 git push origin release-v<N>
+
+# Note: can tag a commit from any branch
+git tag release-v<N> origin/main  # or any other commit
 ```
 
 The `deploy-release` GitHub Actions workflow:
+
 1. Checks out the tagged commit
 2. Runs the full `deno task ok` check suite
 3. Builds with `deno task build`
@@ -67,28 +73,89 @@ deno task build
 bash scripts/deploy-gh-pages.sh release
 ```
 
+## App Store / TestFlight Release
+
+Most content updates go via OTA and don't need an App Store submission. Submit a
+new binary when you change native code (Swift/Kotlin), update Capacitor plugins,
+or want to refresh the bundled baseline.
+
+**iOS version numbers** (in `ios/App/App.xcodeproj/project.pbxproj`, both Debug
+and Release configs):
+
+- `MARKETING_VERSION` — user-facing version in the App Store (e.g., `1.0`,
+  `1.1`). Bump for significant changes.
+- `CURRENT_PROJECT_VERSION` — must be unique per upload to App Store Connect.
+  Increment by 1 for each upload.
+
+These are independent of the web content `#N` version. A single iOS version can
+receive many OTA content updates.
+
+```bash
+# 1. Build web content (gets #N version from commit count)
+deno task build
+
+# 2. Sync to iOS project
+npx cap sync ios
+
+# 3. In Xcode: bump CURRENT_PROJECT_VERSION (and MARKETING_VERSION if needed)
+#    Product > Archive > Distribute App > App Store Connect > Upload
+```
+
+After a new App Store build is installed, the bundled-version gate automatically
+discards any cached OTA update that is older than or equal to the newly bundled
+version. The JS updater then checks for newer OTA versions normally.
+
+## Google Play Release
+
+Same content build process, different native packaging.
+
+**Android version numbers** (in `android/app/build.gradle`):
+
+- `versionName` — user-facing version string (e.g., `"1.0"`)
+- `versionCode` — must be unique and monotonically increasing per upload
+
+```bash
+# 1. Build web content
+deno task build
+
+# 2. Sync to Android project
+npx cap sync android
+
+# 3. In Android Studio: bump versionCode (and versionName if needed)
+#    Build > Generate Signed Bundle > Upload to Play Console
+```
+
+Android does not have OTA updates yet — all content updates go through the Play
+Store.
+
 ## Rolling Back
 
-Push a new tag pointing at the older commit:
+The OTA updater has a **monotonic gate**: it only applies a manifest whose `#N`
+version is strictly greater than the running build (and any already-
+downloaded-but-unapplied OTA). Dev builds — whose version string isn't `#N` —
+are treated as "newer than any release" and never auto-downgraded. This protects
+users who just installed a fresh TestFlight/App Store build from being silently
+replaced by an older OTA.
 
-```bash
-git tag release-v<N+1> <older-commit-hash>
-git push origin release-v<N+1>
-```
+Because of that gate, a rollback must **opt in explicitly**:
 
-Or force-update an existing tag (not recommended but works):
+1. Build and deploy the older commit to `release/` however you like (re-tag or
+   manual deploy).
+2. Edit `release/version.json` on `gh-pages` to add `"allowDowngrade": true`:
+   ```json
+   {
+     "version": "#455",
+     "sha256": "...",
+     "timestamp": "...",
+     "allowDowngrade": true
+   }
+   ```
+3. Commit and push. Clients on newer builds will accept the downgrade on their
+   next background check.
+4. The next normal release publishes without the flag, restoring the gate.
 
-```bash
-git tag -f release-v<N> <older-commit-hash>
-git push -f origin release-v<N>
-```
-
-Either way, the `release/` directory on gh-pages gets updated with the older
-version. The next time the app checks for updates, it downloads the "new"
-(actually older) version. On next restart, the rolled-back version loads.
-
-Rollback is fully automatic from the client's perspective. The updater doesn't
-distinguish between a rollback and a regular update.
+Without `allowDowngrade`, the updater will log
+`[OTA] manifest is older than running build, skipping` and do nothing.
 
 ## Crash Protection
 
@@ -125,11 +192,24 @@ The updater uses `sha256` to verify the downloaded `index.html` matches what was
 built. If the hash doesn't match (corrupted download, CDN serving stale
 content), the update is discarded.
 
+An optional `"allowDowngrade": true` field bypasses the monotonic gate — see
+[Rolling Back](#rolling-back). For local testing from a dev build you can
+instead set `window.__otaAllowDowngrade = true` in Safari Web Inspector
+alongside `window.__otaForceCheck()`.
+
+The build also writes `bundled-version.txt` alongside `version.json`, containing
+just the version string (e.g., `#1453`). This file is bundled into the iOS app's
+`public/` directory and read by the native OTA plugin at boot time to compare
+the bundled version against any cached OTA update (see
+[How It Works](#how-it-works)).
+
 ## Filesystem Layout
 
 ```
 App bundle (read-only, ships with app binary):
   App.app/public/              # Bundled web content (the fallback)
+    index.html
+    bundled-version.txt        # Version string for bundled-vs-OTA comparison
 
 Device filesystem (writable):
   Library/ota/
@@ -153,9 +233,32 @@ gh-pages:
 ```
 
 `release/` is only updated by the release workflow (tag push) or manual deploy.
-`release-staging/` is for testing the OTA flow without touching the real release.
-Web users always get the latest main build; native app users get the version you
-explicitly released.
+`release-staging/` is for testing the OTA flow without touching the real
+release. Web users always get the latest main build; native app users get the
+version you explicitly released.
+
+## Building and Installing on Device
+
+### iOS
+
+```bash
+deno task build          # Build web content (gets #N version)
+npx cap sync ios         # Copy docs/ → ios/App/App/public/
+# Open ios/App.xcworkspace in Xcode, select device, Run
+```
+
+### Android
+
+```bash
+deno task build          # Build web content (gets #N version)
+npx cap sync android     # Copy docs/ → android/app/src/main/assets/public/
+# Open android/ in Android Studio, select device, Run
+```
+
+The app will show version `#N` on the home screen (matching the commit count at
+build time). iOS builds are OTA-update-capable — they will check for and apply
+OTA updates just like a TestFlight or App Store build. Android does not have OTA
+yet.
 
 ## Testing OTA Updates
 
@@ -183,8 +286,8 @@ Then point the updater at staging. Two options:
 - **In Safari Web Inspector** (no rebuild): run in the JS console after the app
   loads:
   ```js
-  document.getElementById('home-screen').dataset.releaseBase =
-    'https://shnayder.github.io/musicreps/release-staging';
+  document.getElementById("home-screen").dataset.releaseBase =
+    "https://shnayder.github.io/musicreps/release-staging";
   __otaForceCheck();
   ```
 
@@ -194,8 +297,8 @@ Then point the updater at staging. Two options:
 2. Deploy to `release-staging/` (steps above)
 3. In Safari Web Inspector, set releaseBase and force a check:
    ```js
-   document.getElementById('home-screen').dataset.releaseBase =
-     'https://shnayder.github.io/musicreps/release-staging';
+   document.getElementById("home-screen").dataset.releaseBase =
+     "https://shnayder.github.io/musicreps/release-staging";
    __otaForceCheck();
    ```
 4. Check console for `[OTA] update registered, will apply on next restart`
@@ -219,15 +322,16 @@ Then point the updater at staging. Two options:
    ```js
    const fs = Capacitor.Plugins.Filesystem;
    await fs.writeFile({
-     path: 'ota/current/index.html',
-     data: btoa('<html><body>BROKEN</body></html>'),
-     directory: 'LIBRARY',
+     path: "ota/current/index.html",
+     data: btoa("<html><body>BROKEN</body></html>"),
+     directory: "LIBRARY",
    });
    ```
 3. Restart the app — it loads the broken HTML (attempt 1)
 4. Restart again — attempt 2, still broken
 5. Restart a third time — plugin gives up, falls back to bundled content
-6. Check console for `[OTA] update failed after 2 attempts, reverting to bundled`
+6. Check console for
+   `[OTA] update failed after 2 attempts, reverting to bundled`
 
 ### Cleaning up staging
 
@@ -242,10 +346,11 @@ git push origin gh-pages
 
 ## Key Paths
 
-| Path                                    | Purpose                              |
-| --------------------------------------- | ------------------------------------ |
-| `ios/App/App/OTAUpdatePlugin.swift`     | Native plugin (boot routing + state) |
-| `ios/App/App/AppViewController.swift`   | Registers the plugin with Capacitor  |
-| `src/updater.ts`                        | JS update checker + downloader       |
-| `scripts/deploy-gh-pages.sh`            | Deploy script (all modes)            |
-| `.github/workflows/deploy-release.yml`  | CI workflow for tag-triggered releases |
+| Path                                   | Purpose                                |
+| -------------------------------------- | -------------------------------------- |
+| `ios/App/App/OTAUpdatePlugin.swift`    | Native plugin (boot routing + state)   |
+| `ios/App/App/AppViewController.swift`  | Registers the plugin with Capacitor    |
+| `src/updater.ts`                       | JS update checker + downloader         |
+| `docs/bundled-version.txt`             | Build-time version for OTA comparison  |
+| `scripts/deploy-gh-pages.sh`           | Deploy script (all modes)              |
+| `.github/workflows/deploy-release.yml` | CI workflow for tag-triggered releases |
